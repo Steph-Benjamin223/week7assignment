@@ -49,3 +49,20 @@ for (let i = 0; i < names.length; i++) {
 }
 
 console.log(`The concatenated names are: ${concatenatedNames}`);
+
+// 5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+// For example:
+let nameLengths = [];
+for (let i = 0; i < names.length; i++) {
+  const length = names[i].length;
+  nameLengths.push(length);
+}
+
+// let names = ["Kelly", "Sam", "Kate"];    // starting with this array
+// let nameLengths = [5, 3, 4];             // create a new array
+
+// 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
+let sum = 0;
+for (let i = 0; i < nameLengths.length; i++) {
+  sum += nameLengths[i].length;
+}
