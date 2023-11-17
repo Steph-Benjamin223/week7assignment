@@ -92,3 +92,6 @@ function concatenateWord(word, n) {
 }
 
 concatenateWord("Hello", 6);
+
+//8.
+//Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
