@@ -93,5 +93,27 @@ function concatenateWord(word, n) {
 
 concatenateWord("Hello", 6);
 
-//8.
-//Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
+//8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
+
+function getFullName(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+const fullName = getFullName("John", "Doe");
+console.log(fullName);
+
+//9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+
+function isSumGreaterThan100(numbers) {
+  const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  return sum > 100;
+}
+
+const numbers = [20, 30, 40, 15];
+const isGreaterThan100 = isSumGreaterThan100(numbers);
+
+console.log(isGreaterThan100); // Output: true
+
+//10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
