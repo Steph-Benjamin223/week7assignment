@@ -103,17 +103,28 @@ console.log(fullName);
 
 //9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 
-function isSumGreaterThan100(numbers) {
-  const sum = numbers.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    0
-  );
-  return sum > 100;
+function arrayOfNumbers(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  if (sum > 100) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
-const numbers = [20, 30, 40, 15];
-const isGreaterThan100 = isSumGreaterThan100(numbers);
-
-console.log(isGreaterThan100); // Output: true
+let numbers = [7, 9, 11, 23, 27, 39];
+console.log("arrayOfNumbers", arrayOfNumbers(numbers));
 
 //10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+
+function numbersArray(nums) {
+  let average = 0;
+  for (let i = 0; i < nums.length; i++) {
+    average += nums[i];
+  }
+
+  average = average / nums.length;
+  return average;
+}
+let nums = [7, 9, 11, 23, 27, 39];
+console.log("numbersArray", numbersArray(nums));
