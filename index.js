@@ -1,26 +1,26 @@
 // 1. Create an array called ages
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 
-//  Subtract the first element from the last element programmatically
+//  Subtract the first element from the last element programmatically, the difference between the first and the last element of the array is 90
 let difference = ages[ages.length - 1] - ages[0];
 console.log(
   `The difference between the first and last elements is ${difference}.`
 );
 
-// Add a new age to the array and repeat the subtraction step to ensure it's dynamic
+// Add a new age to the array (50) and repeat the subtraction step to ensure it's dynamic, and the difference between the first and last element is now 47.
 ages.push(50);
 difference = ages[ages.length - 1] - ages[0];
 console.log(
   `The difference between the first and last elements is now ${difference}.`
 );
 
-//Use a loop to calculate the average age
+//Use a loop to calculate the average age, average age prints to console 31.11111.
 let totalAge = 0;
 
 for (let i = 0; i < ages.length; i++) {
   totalAge += ages[i];
 }
-
+//
 const averageAge = totalAge / ages.length;
 
 console.log(`The average age is ${averageAge}.`);
@@ -38,9 +38,9 @@ for (let i = 0; i < names.length; i++) {
 
 const averageLetters = totalLetters / names.length;
 
-console.log(`The average number of letters per name is ${averageLetters}.`);
+console.log(`The average number of letters per name is ${averageLetters}.`); // the average number of letters per name prints to console 3.8333333333333335
 
-//  Use another loop to concatenate all the names together separated by spaces
+//  Use another loop to concatenate all the names together separated by spaces (double quotes indicate the spaces)
 let concatenatedNames = "";
 
 for (let i = 0; i < names.length; i++) {
@@ -62,25 +62,23 @@ let firstElement = array[0];
 console.log(firstElement); // output: 1
 
 // 5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
-
+//
 let nameLengths = [];
 for (let i = 0; i < names.length; i++) {
   const length = names[i].length;
   nameLengths.push(length);
 }
-
-// let names = ["Kelly", "Sam", "Kate"];    // starting with this array
-// let nameLengths = [5, 3, 4];             // create a new array
+console.log(nameLengths); // output: [3, 5, 3, 5, 4, 3]
 
 // 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 let sum = 0;
 for (let i = 0; i < nameLengths.length; i++) {
   sum += nameLengths[i].length;
 }
+console.log(sum); // output: 23
 
 //7. Write a function that takes two parameters, word and n,
-//as arguments and returns the word concatenated to itself n number of times.
-//(i.e. if I pass in ‘Hello’ and 3, I would expect the function to return
+//as arguments and returns the word concatenated to itself n numturn
 //‘HelloHelloHello’).
 
 function concatenateWord(word, n) {
@@ -91,9 +89,9 @@ function concatenateWord(word, n) {
   console.log(concatenatedWord);
 }
 
-concatenateWord("Hello", 6);
+concatenateWord("Hello", 6); // output: HelloHelloHelloHelloHelloHello
 
-//8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
+//8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space
 
 function getFullName(firstName, lastName) {
   return `${firstName} ${lastName}`;
@@ -128,3 +126,39 @@ function numbersArray(nums) {
 }
 let nums = [7, 9, 11, 23, 27, 39];
 console.log("numbersArray", numbersArray(nums));
+
+//11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+
+function compareAverage(arr1, arr2) {
+  const average1 = calculateAverage(arr1);
+  const average2 = calculateAverage(arr2);
+
+  return average1 > average2;
+}
+
+function calculateAverage(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  const sum = arr.reduce((total, num) => total + num, 0);
+  return sum / arr.length;
+}
+// Example
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [6, 7, 8, 9, 10];
+
+console.log(compareAverage(array1, array2));
+
+//12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+
+function willBuyDrink(isHotOutside, moneyInPocket) {
+  if (isHotOutside && moneyInPocket > 10.5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Example
+console.log(willBuyDrink(true, 15.75));
